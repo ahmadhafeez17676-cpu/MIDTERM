@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Clock, Star, ExternalLink, Tag, User } from "lucide-react";
 
@@ -43,7 +44,14 @@ export default function AdDetailPage() {
         <div className="lg:col-span-2 space-y-6">
           {/* Hero Image */}
           <div className="relative rounded-2xl overflow-hidden h-[300px] md:h-[400px]">
-            <img src={ad.imageUrl} alt={ad.title} className="w-full h-full object-cover" />
+            <Image 
+              src={ad.imageUrl} 
+              alt={ad.title} 
+              className="w-full h-full object-cover" 
+              width={800} 
+              height={400} 
+              priority
+            />
             {ad.featured && (
               <div className="absolute top-4 left-4 px-4 py-1.5 rounded-full bg-primary/90 text-white text-sm font-semibold flex items-center gap-1.5">
                 <Star className="h-4 w-4" /> Featured Ad
@@ -81,7 +89,13 @@ export default function AdDetailPage() {
             <div className="grid grid-cols-3 gap-3">
               {ad.media.map((url, i) => (
                 <div key={i} className="rounded-xl overflow-hidden h-32 hover:ring-2 ring-primary/50 transition-all cursor-pointer">
-                  <img src={url} alt={`Media ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  <Image 
+                    src={url} 
+                    alt={`Media ${i + 1}`} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                    width={400} 
+                    height={300}
+                  />
                 </div>
               ))}
             </div>
