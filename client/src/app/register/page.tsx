@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Zap, Mail, Lock, Eye, EyeOff, ArrowRight, User, Building2 } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, User, Building2 } from "lucide-react";
 
 const roles = [
   { value: "client", label: "Client", desc: "Command and deploy global ad nodes" },

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { 
-  TrendingUp, Star, Clock, 
-  Zap, Megaphone, BarChart3, DollarSign, ChevronRight, Users, Settings
+  TrendingUp, Clock, 
+  Zap, Megaphone, DollarSign, ChevronRight, Users, Settings
 } from "lucide-react";
 
 // Mock data
